@@ -1,0 +1,6 @@
+en:
+  errors:
+    gt?:
+      arg:
+        default: "age must be above %{num}"
+  filled?: "must be filled"

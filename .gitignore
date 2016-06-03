@@ -1,0 +1,9 @@
+/db/wine_clubs_development
+/db/wine_clubs_test
+/public/assets*
+/tmp
+/.env
+/.env.*
+/**/*.env
+.byebug_history
+.hanamirc
