@@ -1,7 +1,6 @@
 module Web::Controllers::Club
   class Index
     include Web::Action
-    include Web::DataTransferObjects::ClubData
 
     def call(params)
       params do
@@ -9,7 +8,7 @@ module Web::Controllers::Club
         param :age
       end
 
-      results = DEFAULT_SCHEMA.call({id: params[:id], age: params[:age]})
+      results = Web::DataTransferObjects::ClubData.new(id: params[:id], age: params[:age]).validate
 
       if results.success?
         self.body = "Club mofo created"

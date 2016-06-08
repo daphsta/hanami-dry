@@ -1,5 +1,6 @@
 require 'hanami/helpers'
 require 'hanami/assets'
+require 'hanami/validations'
 
 module Web
   class Application < Hanami::Application
@@ -17,7 +18,7 @@ module Web
       # When you add new directories, remember to add them here.
       #
       load_paths << [
-        'data_transfer_objects',
+        'club_validator',
         'controllers',
         'views'
       ]

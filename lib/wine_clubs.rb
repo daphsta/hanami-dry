@@ -9,7 +9,7 @@ Hanami::Model.configure do
   # Available options:
   #
   #  * Memory adapter
-  #    adapter type: :memory, uri: 'memory://localhost/wine_clubs_development'
+     # adapter type: :memory, uri: 'memory://localhost/wine_clubs_development'
   #
   #  * SQL adapter
   #    adapter type: :sql, uri: 'sqlite://db/wine_clubs_development.sqlite3'
@@ -25,19 +25,19 @@ Hanami::Model.configure do
   #
   # You can specify mapping file to load with:
   #
-  # mapping "#{__dir__}/config/mapping"
+  mapping "#{__dir__}/config/mapping"
   #
   # Alternatively, you can use a block syntax like the following:
   #
-  mapping do
-    # collection :users do
-    #   entity     User
-    #   repository UserRepository
-    #
-    #   attribute :id,   Integer
-    #   attribute :name, String
-    # end
-  end
+  # mapping do
+  #   collection :clubs do
+  #     entity     Club
+  #     repository ClubRepository
+  #
+  #     attribute :id,   Integer
+  #     attribute :name, String
+  #   end
+  # end
 end.load!
 
 Hanami::Mailer.configure do
