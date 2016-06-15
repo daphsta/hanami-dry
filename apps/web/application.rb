@@ -1,6 +1,6 @@
 require 'hanami/helpers'
 require 'hanami/assets'
-require 'hanami/validations'
+require 'dry-validation'
 
 module Web
   class Application < Hanami::Application

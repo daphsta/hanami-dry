@@ -1,12 +1,11 @@
-require 'hanami/validations'
 
 module Web::ClubValidator
   class ClubData
-    include Hanami::Validations
 
-    validations do
-      required(:name) { filled? & str? & size?(3..50) }
-      required(:start_at).filled(:time?)
+    CLUB_SCHEMA = Dry::Validation.Schema do
+      key(:name) { filled? & str? }
+      key(:starts_at) { filled? & time? }
+      key(:product_id) { int? }
     end
   end
 end
